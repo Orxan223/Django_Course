@@ -41,55 +41,25 @@
 					
 					<div class="blog-author">
 						<div class="author-bio">
-							<h3 class="author_name"><a href="#">Tom Jobs</a></h3>
-							<h5>CEO at <a href="#">SmartEDU</a></h5>
+							<h3 class="author_name"><a href="{% url 'teacher_detail' course.teacher.pk %}">{{course.teacher.name}}</a></h3>
+							<h5> <a href="#">{{course.teacher.title}}</a></h5>
 							<p class="author_det">
-								Lorem ipsum dolor sit amet, consectetur adip, sed do eiusmod tempor incididunt  ut aut reiciendise voluptat maiores alias consequaturs aut perferendis doloribus omnis saperet docendi nec, eos ea alii molestiae aliquand.
+								{{course.teacher.description}}
 							</p>
 						</div>
 						<div class="author-desc">
-							<img src="images/author.jpg" alt="about author">
+							<img src="{{course.teacher.image.url}}" alt="about author">
 							<ul class="author-social">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								<li><a href="{{course.teacher.facebook}}"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="{{course.teacher.twitter}}"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="{{course.teacher.linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="{{course.teacher.youtube}}"><i class="fa fa-youtube"></i></a></li>
+
 							</ul>
 						</div>
 					</div>
 					
 			
-					<div class="comments-form">
-						<h4>Leave a comment</h4>
-						<div class="comment-form-main">
-							<form action="#">
-								<div class="row">
-									<div class="col-md-4">
-										<div class="form-group">
-											<input class="form-control" name="commenter-name" placeholder="Name" id="commenter-name" type="text">
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<input class="form-control" name="commenter-email" placeholder="Email" id="commenter-email" type="text">
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<input class="form-control" name="commenter-url" placeholder="Website URL" id="commenter-url" type="text">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea class="form-control" name="commenter-message" placeholder="Message" id="commenter-message" cols="30" rows="2"></textarea>
-										</div>
-									</div>
-									<div class="col-md-12 post-btn">
-										<button class="hover-btn-new orange"><span>Post Comment</span></button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
 					
                 </div><!-- end col -->
 				<div class="col-lg-3 col-12 right-single">
